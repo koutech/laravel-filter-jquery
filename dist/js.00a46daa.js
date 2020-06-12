@@ -18432,6 +18432,8 @@ $(document).ready(function () {
           // loading         
           $('.filter-btn').html("\n                <div id=\"floatingBarsG\">\n                    <div class=\"blockG\" id=\"rotateG_01\"></div>\n                    <div class=\"blockG\" id=\"rotateG_02\"></div>\n                    <div class=\"blockG\" id=\"rotateG_03\"></div>\n                    <div class=\"blockG\" id=\"rotateG_04\"></div>\n                    <div class=\"blockG\" id=\"rotateG_05\"></div>\n                    <div class=\"blockG\" id=\"rotateG_06\"></div>\n                    <div class=\"blockG\" id=\"rotateG_07\"></div>\n                    <div class=\"blockG\" id=\"rotateG_08\"></div>\n                </div> \n                ");
           $('.filter-btn').attr('disabled', true);
+        } else {
+          $('#f-t-loading').html("\n                    <div id=\"floatingBarsG\">\n                        <div class=\"blockG\" id=\"rotateG_01\"></div>\n                        <div class=\"blockG\" id=\"rotateG_02\"></div>\n                        <div class=\"blockG\" id=\"rotateG_03\"></div>\n                        <div class=\"blockG\" id=\"rotateG_04\"></div>\n                        <div class=\"blockG\" id=\"rotateG_05\"></div>\n                        <div class=\"blockG\" id=\"rotateG_06\"></div>\n                        <div class=\"blockG\" id=\"rotateG_07\"></div>\n                        <div class=\"blockG\" id=\"rotateG_08\"></div>\n                    </div> \n                    ");
         }
       },
       success: function success(response) {
@@ -18462,6 +18464,7 @@ $(document).ready(function () {
               });
               author = author.substr(0, author.length - 1);
               $("#books").append("\n                        <div class=\"card mb-2\">\n                        <div class=\"card-header\">\n                        <div class=\"card-title\">\n                            <p class=\"float-left\">".concat(books.data[book].title, "</p>\n                            <span class=\"float-right p-1 badge ").concat(books.data[book].status ? 'badge-success' : 'badge-danger', "\">\n                                ").concat(books.data[book].status ? 'stock' : 'borrow', "\n                            </span>\n                        </div>\n                        </div>\n                        <div class=\"card-body\">\n                            <li>Author: <span class=\"text-bold text-primary\">\n                                ").concat(author, "\n                            </span></li>\n                            <li>Published At: <span class=\"text-bold text-primary\">").concat(books.data[book].published_at, "</span></li>\n                            <li>Publisher: \n                            ").concat(publisher, "</li>\n                        </div>\n                    </div>\n                        "));
+              $('#f-t-loading').html('');
             }, 1000);
           });
         } else {
@@ -18497,7 +18500,7 @@ window.$ = window.Jquery = jquery; // install bootstrap
 
 // init plugin by koutech
 window._Filter = new _filter.default();
-window.__RequestDomainTech = 'http://127.0.0.1:8000/api/books'; // install custom css 
+window.__RequestDomainTech = 'http://api-filter-v1.partialsta.com/api/books'; // install custom css 
 
 // install prebuild js 
 require('./build/FilterBook');
@@ -18529,7 +18532,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49259" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56976" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

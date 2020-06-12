@@ -9,15 +9,13 @@
     visibility: hidden;
     opacity: 0;
     height: 0;
-    transition: 0.5s ease-in-out;
 }
 
 .filter-more.full 
 {
     visibility: visible;
     opacity: 1;
-    height: 100px;
-    transition: 0.5s ease-in-out;
+    height: auto;
 }
 
 

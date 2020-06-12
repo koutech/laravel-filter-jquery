@@ -34,6 +34,8 @@ $(document).ready(function() {
 
         var url = query;
 
+        
+
 
         $.ajax({
             url: url,
@@ -55,6 +57,20 @@ $(document).ready(function() {
                 </div> 
                 `);
                 $('.filter-btn').attr('disabled', true);
+                }
+                else{
+                    $('#f-t-loading').html(`
+                    <div id="floatingBarsG">
+                        <div class="blockG" id="rotateG_01"></div>
+                        <div class="blockG" id="rotateG_02"></div>
+                        <div class="blockG" id="rotateG_03"></div>
+                        <div class="blockG" id="rotateG_04"></div>
+                        <div class="blockG" id="rotateG_05"></div>
+                        <div class="blockG" id="rotateG_06"></div>
+                        <div class="blockG" id="rotateG_07"></div>
+                        <div class="blockG" id="rotateG_08"></div>
+                    </div> 
+                    `)
                 }
                 
             },
@@ -120,6 +136,9 @@ $(document).ready(function() {
                     </div>
                         `
                     );
+
+                    $('#f-t-loading').html('')
+
 
 
                 }, 1000)

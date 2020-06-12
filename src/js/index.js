@@ -23,7 +23,7 @@ import Filter from './plugin/filter/filter.min'
 
 // init plugin by koutech
 window._Filter = new Filter();
-window.__RequestDomainTech = 'http://127.0.0.1:8000/api/books';
+window.__RequestDomainTech = 'http://api-filter-v1.partialsta.com/api/books';
 
 
 // install custom css 

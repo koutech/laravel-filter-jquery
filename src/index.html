@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filter By Koutech With Laravel & Jquery</title>
-    <script src="./src/js/index.js"></script>
+    <script src="./js/index.js"></script>
 
 </head>
 <body>
@@ -27,7 +27,7 @@
                 <button id="more" class="btn btn-sm border float-right">More +</button>
             </div>
         
-            <div class="card-body border pb-5 pt-3 mb-3">
+            <div class="card-body border pb-5 mb-3">
         
                 <form id="filter-form">
         
@@ -65,26 +65,32 @@
         
         
                     <div class="col-md-4">
-                        <label for="published_at">Published At</label>
-                        <input type="text" name="published_at" id="published_at" class="form-control">
+                        <div class="form-group">
+                            <label for="published_at">Published At</label>
+                            <input type="text" name="published_at" id="published_at" class="form-control">
+                        </div>
                     </div>
         
         
         
                     <div class="col-md-5">
-                        <label for="publisher">Publisher</label>
-                        <input type="text" name="publisher" id="publisher" class="form-control">
+                        <div class="form-group">
+                            <label for="publisher">Publisher</label>
+                            <input type="text" name="publisher" id="publisher" class="form-control">
+                        </div>
                     </div>
         
                     <div class="col-md-3">
-                        <label for="mode">Search Mode</label>
-                        <select name="mode" id="mode" class="form-control">
-                            <option value="all">All</option>
-                            <option value="more">More</option>
-                            <option value="accurate">Accurate</option>
-                        </select>
+                        <div class="form-group">
+                            <label for="mode">Search Mode</label>
+                            <select name="mode" id="mode" class="form-control">
+                                <option value="all">All</option>
+                                <option value="more">More</option>
+                                <option value="accurate">Accurate</option>
+                            </select>
+                        </div>
                     </div>
-        
+    
                    
                    
                 </div>
@@ -100,6 +106,10 @@
         
                 </form>
         
+            </div>
+
+            <div class="text-center" id="f-t-loading">
+
             </div>
         
         
